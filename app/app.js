@@ -19,20 +19,28 @@
 //create
   // code goes here
   var setItem = function(key, val) {
-    return window.localStorage.setItem(key, val)
+    return window.localStorage.setItem(key, val);
   }
 
 //update
   // code goes here
+  // might not need?
 
 //delete
   // code goes here
+  var removeItem = function(key) {
+    return window.localStorage.removeItem(key);
+  }
 
 //clear everything
   // code goes here
+  var clear = function() {
+    return window.localStorage.clear();
+  }
 
 // key exists? 
   // code goes here
+  // might not need?
 
 
 ///////////////////////////////////////////
@@ -62,7 +70,12 @@ $(document).ready(function() {
 
  // click event listener for delete
    $('.btn-delete').on('click', function(e){
-    localStorage.removeItem(e.currentTarget.dataset.key)
+    removeItem(e.currentTarget.dataset.key)
+   });
+
+   // click event for clear 
+   $('.btn-clear-all').on('click',  function(){
+     clear();
    });
  
 });
