@@ -7,11 +7,11 @@ Create Read Update and Delete framework using JS
 - [x] A form
 - [x] key/value input boxes 
 - [x] create button
-- [ ] delete button
+- [x] delete button
 - [x] Allow a user to enter 
 - [x] update data using the form
 - [x] display data
-- [ ] re-display after new data is added without a refresh
+- [ ] re-display after new data is added/removed without a refresh
 
 
 #### App (back end)

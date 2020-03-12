@@ -12,9 +12,15 @@
 // Local Storage Utility Functions
 //get item
   // code goes here
+  var getItem = function(key){
+    return window.localStorage.getItem(key);
+  }
 
 //create
   // code goes here
+  var setItem = function(key, val) {
+    return window.localStorage.setItem(key, val)
+  }
 
 //update
   // code goes here
@@ -34,11 +40,11 @@ $(document).ready(function() {
 
   // read all data from local storage
   var localStorageHTML = '';
-
-  // TODO add delete button with key? attached so inline deleting is possible. 
+ 
   for(var n = 0; n < localStorage.length; n++) {
     // format data into html string
-    localStorageHTML = localStorageHTML + `<div>${localStorage.key(n)}: ${localStorage.getItem(localStorage.key(n))}</div>`
+    var deleteButton = `<button class="btn-delete" data-key=${localStorage.key(n)}>delete</button>`
+    localStorageHTML = localStorageHTML + `<div>${localStorage.key(n)}: ${getItem(localStorage.key(n))}${deleteButton}</div>`
   }
   $('.display').html(localStorageHTML); // pass formated data to .html()
 
@@ -48,7 +54,7 @@ $(document).ready(function() {
       // read value from input boxes
       var inputKey = $('.inp-key').val();
       var inputValue = $('.inp-value').val();
-      localStorage.setItem(inputKey, inputValue);
+      setItem(inputKey, inputValue);
       // set item in local storage
           // local storage needs key and value
 
@@ -56,8 +62,7 @@ $(document).ready(function() {
 
  // click event listener for delete
    $('.btn-delete').on('click', function(e){
-    var inputKey = $('.inp-key').val();
-    localStorage.removeItem(inputKey);
+    localStorage.removeItem(e.currentTarget.dataset.key)
    });
  
 });
