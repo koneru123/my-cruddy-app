@@ -32,13 +32,13 @@
 ///////////////////////////////////////////
 $(document).ready(function() {
 
-  $('.btn-create').on('click', function(e) {
+  $('.btn-create').on('click', function(e) { 
     console.log(e);
     // click event listener for create
       // read value from input boxes
       var inputKey = $('.inp-key').val();
       var inputValue = $('.inp-value').val();
-      console.log(inputKey, inputValue);
+      localStorage.setItem(inputKey, inputValue);
       // set item in local storage
           // local storage needs key and value
 
