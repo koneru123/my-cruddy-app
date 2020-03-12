@@ -32,8 +32,17 @@
 ///////////////////////////////////////////
 $(document).ready(function() {
 
- // click event listener for create
-    // code goes here
+  $('.btn-create').on('click', function(e) {
+    console.log(e);
+    // click event listener for create
+      // read value from input boxes
+      var inputKey = $('.inp-key').val();
+      var inputValue = $('.inp-value').val();
+      console.log(inputKey, inputValue);
+      // set item in local storage
+          // local storage needs key and value
+
+  });
 
  // click event listener for update
    // code goes here
