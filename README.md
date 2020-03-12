@@ -4,13 +4,16 @@ Create Read Update and Delete framework using JS
  ## Tasks
 
 #### UI (front end)
-- [ ] A form
-- [ ] 2 input boxes 2 buttons
-- [ ] Allow a user to enter and update data using the form
+- [x] A form
+- [x] 2 input boxes 2 buttons
+- [x] Allow a user to enter 
+- [x] update data using the form
+- [x] display data
+- [ ] re-display after new data is added without a refresh
 
 
 #### App (back end)
-- [ ] Create data in localstorage    
+- [x] Create data in localstorage    
 - [ ] Read data in localstorage
 - [ ] Update Data in localstorage
 - [ ] Delete data in localstorage

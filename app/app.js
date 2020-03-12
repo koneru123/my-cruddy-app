@@ -32,6 +32,14 @@
 ///////////////////////////////////////////
 $(document).ready(function() {
 
+  // read all data from local storage
+  var localStorageHTML = '';
+  for(var n = 0; n < localStorage.length; n++) {
+    // format data into html string
+    localStorageHTML = localStorageHTML + `<div>${localStorage.key(n)}: ${localStorage.getItem(localStorage.key(n))}</div>`
+  }
+  $('.display').html(localStorageHTML); // pass formated data to .html()
+
   $('.btn-create').on('click', function(e) { 
     console.log(e);
     // click event listener for create
