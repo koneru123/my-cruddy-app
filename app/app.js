@@ -34,6 +34,8 @@ $(document).ready(function() {
 
   // read all data from local storage
   var localStorageHTML = '';
+
+  // TODO add delete button with key? attached so inline deleting is possible. 
   for(var n = 0; n < localStorage.length; n++) {
     // format data into html string
     localStorageHTML = localStorageHTML + `<div>${localStorage.key(n)}: ${localStorage.getItem(localStorage.key(n))}</div>`
@@ -52,7 +54,10 @@ $(document).ready(function() {
 
   });
 
- // click event listener for update
-   // code goes here
+ // click event listener for delete
+   $('.btn-delete').on('click', function(e){
+    var inputKey = $('.inp-key').val();
+    localStorage.removeItem(inputKey);
+   });
  
 });

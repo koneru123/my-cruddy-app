@@ -5,7 +5,9 @@ Create Read Update and Delete framework using JS
 
 #### UI (front end)
 - [x] A form
-- [x] 2 input boxes 2 buttons
+- [x] key/value input boxes 
+- [x] create button
+- [ ] delete button
 - [x] Allow a user to enter 
 - [x] update data using the form
 - [x] display data
@@ -14,9 +16,9 @@ Create Read Update and Delete framework using JS
 
 #### App (back end)
 - [x] Create data in localstorage    
-- [ ] Read data in localstorage
-- [ ] Update Data in localstorage
-- [ ] Delete data in localstorage
+- [x] Read data in localstorage
+- [x] Update Data in localstorage
+- [x] Delete data in localstorage
 
  ### Basic Reqs
 - [ ] Where to store data? (localstorage)
